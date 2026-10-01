@@ -1,0 +1,48 @@
+﻿<Window x:Class="lab1._1_Zimina_BPI_24_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab1._1_Zimina_BPI_24_01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="400" MaxHeight="200" MaxWidth="400" MinHeight="200" MinWidth="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="100"/>
+
+        </Grid.RowDefinitions>
+
+        <WrapPanel Grid.Column="0" Grid.Row="0">
+            <Label>Название книги</Label>
+            <TextBox Width="100" Height="20" x:Name="bookNameInput"/>
+        </WrapPanel>
+
+        <WrapPanel Grid.Column="0" Grid.Row="1">
+            <Label>Кол-во страниц</Label>
+            <TextBox Width="100" Height="20" x:Name="bookPagesCnt"/>
+        </WrapPanel>
+
+        <WrapPanel Grid.Column="0" Grid.Row="2">
+            <Label>Цена</Label>
+            <TextBox Width="100" Height="20" x:Name="bookCostInput"/>
+        </WrapPanel>
+
+        <WrapPanel Grid.Column="0" Grid.Row="3">
+            <TextBlock Text="Средняя цена одной страницы: " x:Name="CostboxMain" Visibility="Collapsed"/>
+            <TextBlock Text="Средняя цена одной страницы с учетом названия: " x:Name="CostboxEdit" Visibility="Collapsed"/>
+
+            <Button Width="250" Height="30" Content="Вычислить среднюю стоимость" x:Name="ButtonCalculate"/>
+        </WrapPanel>
+
+    </Grid>
+</Window>
+
+
+
